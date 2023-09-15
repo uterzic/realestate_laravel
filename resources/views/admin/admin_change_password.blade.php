@@ -41,7 +41,7 @@
   
                                   <h6 class="card-title">Change Admin Password</h6>
   
-                                  <form method="POST" action="{{ route('admin.profile.store') }}"  class="forms-sample" enctype="multipart/form-data">
+                                  <form method="POST" action="{{ route('admin.update.password') }}"  class="forms-sample">
                                     @csrf
                                       <div class="mb-3">
                                           <label for="exampleInputEmail1" class="form-label">Old password</label>
@@ -52,14 +52,14 @@
                                       </div>
                                       <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">New password</label>
-                                        <input type="password" class="form-control @error('old_password') is-invalid @enderror" id="new_password" autocomplete="off" name="new_password">
+                                        <input type="password" class="form-control @error('new_password') is-invalid @enderror" id="new_password" autocomplete="off" name="new_password">
                                         @error('new_password')
                                           <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                       </div>
                                       <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Confirm new password</label>
-                                        <input type="password" class="form-control" id="new_password_confirm" autocomplete="off" name="new_password_confirm">
+                                        <input type="password" class="form-control" id="new_password_confirmation" autocomplete="off" name="new_password_confirmation">
                                       </div>
                                       <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                                   </form>

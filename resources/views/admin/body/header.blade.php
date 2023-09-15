@@ -193,11 +193,11 @@
                 <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
                     <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
                         <div class="mb-3">
-                            <img class="wd-80 ht-80 rounded-circle" src="{{ (!empty($profileData->photo)) ? url('upload/admin_images/'. $profileData->photo) : url('upload/no_image.jpg') }}" alt="">
+                            <img class="wd-80 ht-80 rounded-circle" src="{{ (!empty($data->photo)) ? url('upload/admin_images/'. $data->photo) : url('upload/no_image.jpg') }}" alt="">
                         </div>
                         <div class="text-center">
-                            <p class="tx-16 fw-bolder">{{ $profileData->name }}</p>
-                            <p class="tx-12 text-muted">{{ $profileData->email }}</p>
+                            <p class="tx-16 fw-bolder">{{ $data->name }}</p>
+                            <p class="tx-12 text-muted">{{ $data->email }}</p>
                         </div>
                     </div>
     <ul class="list-unstyled p-1">
